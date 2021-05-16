@@ -24,17 +24,10 @@ import axios from 'axios'
 
 export default {
   async asyncData({ $config }) {
-    const menu = await axios.get(
-      `${$config.apiUrl}/menu?limit=3&filters=flag[equals]true`,
-      {
-        headers: { 'X-API-KEY': $config.apiKey },
-      }
-    )
     const info = await axios.get(`${$config.apiUrl}/information?limit=3`, {
       headers: { 'X-API-KEY': $config.apiKey },
     })
     return {
-      menuItems: menu.data.contents,
       infoItems: info.data.contents,
     }
   },
