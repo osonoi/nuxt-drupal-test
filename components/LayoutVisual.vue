@@ -70,10 +70,4 @@ export default {
 .visual-home {
   background-image: url('~@/assets/img/visual-home.jpg');
 }
-.visual-information {
-  background-image: url('~@/assets/img/visual-information.jpg');
-}
-.visual-error {
-  background-image: url('~@/assets/img/visual-error.jpg');
-}
 </style>
