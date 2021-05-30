@@ -4,10 +4,13 @@
   >
     <a :href="'/information/' + id + '/'" class="block px-4 py-3">
       <time class="text-gray-700 text-base mb-1 block md:w-1/6">
-        {{ date }}
+        {{ title }}
       </time>
       <div class="md:w-10/12">
-        {{ title }}
+        {{ body }}
+      </div>
+      <div class="md:w-10/12">
+        {{ recipe }}
       </div>
     </a>
   </div>
@@ -21,7 +24,11 @@ export default {
       type: String,
       required: true,
     },
-    date: {
+    body: {
+      type: String,
+      required: true,
+    },
+    recipe: {
       type: String,
       required: true,
     },
