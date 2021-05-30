@@ -25,7 +25,7 @@ import axios from 'axios'
 
 export default {
   async asyncData({ $config }) {
-    const info = await axios.get(`http://my-drupal9-site.ddev.site/jsonapi/node/reshihi`)
+    const info = await axios.get(`http://52.69.103.42/jsonapi/node/reshihi`)
     return {
       infoItems: info.data.data,
     }
