@@ -9,30 +9,19 @@
       <div class="md:w-10/12">
         {{ body }}
       </div>
-      <div class="md:w-10/12">
-        {{ recipe }}
-      </div>
     </a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LayoutInformationList',
+  name: 'PasicpageList',
   props: {
     title: {
       type: String,
       required: true,
     },
     body: {
-      type: String,
-      required: true,
-    },
-    recipe: {
-      type: String,
-      required: true,
-    },
-    id: {
       type: String,
       required: true,
     },
