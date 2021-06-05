@@ -9,8 +9,7 @@
       <div class="mb-20">
         <layout-information-list
           v-for="(item, index) in infoItems"
-          :id="item.id"
-          :key="index"
+          :kry="index"
           :title="item.attributes.title"
           :body="item.attributes.body.value"
           :recipe="item.attributes.field_recipe.processed"
@@ -25,7 +24,7 @@ import axios from 'axios'
 
 export default {
   async asyncData({ $config }) {
-    const info = await axios.get(`http://52.69.103.42/jsonapi/node/reshihi`)
+    const info = await axios.get(`${$config.apiUrl}`)
     return {
       infoItems: info.data.data,
     }
